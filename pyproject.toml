@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portmap"
+version = "0.1.0"
+description = "Show which processes are listening on which ports"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+keywords = ["ports", "networking", "process", "developer-tools", "devtools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Networking",
+    "Topic :: System :: Systems Administration",
+]
+dependencies = [
+    "click>=8.0.0",
+]
+
+[project.optional-dependencies]
+full = ["psutil>=5.9.0"]
+
+[project.scripts]
+portmap = "portmap.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Gnomecromancer/portmap"
+Repository = "https://github.com/Gnomecromancer/portmap"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["portmap*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
