@@ -3,7 +3,7 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "portmap"
+name = "whoport"
 version = "0.1.0"
 description = "Show which processes are listening on which ports"
 readme = "README.md"
@@ -26,7 +26,7 @@ dependencies = [
 full = ["psutil>=5.9.0"]
 
 [project.scripts]
-portmap = "portmap.cli:main"
+whoport = "portmap.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/Gnomecromancer/portmap"

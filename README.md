@@ -1,36 +1,36 @@
-# portmap
+# whoport
 
 Show which processes are listening on which ports — with filtering by port number or process name.
 
 ## Install
 
 ```bash
-pip install portmap[full]
+pip install whoport[full]
 ```
 
-(`psutil` is required for process information. The base `pip install portmap` works but will prompt you to install it.)
+(`psutil` is required for process information. The base `pip install whoport` works but will prompt you to install it.)
 
 ## Usage
 
 ```bash
 # Show all listening ports
-portmap
+whoport
 
 # Show only specific ports
-portmap 8080 3000 5432
+whoport 8080 3000 5432
 
 # Filter by process name (partial match)
-portmap --process node
-portmap --process python
+whoport --process node
+whoport --process python
 
 # Include UDP sockets
-portmap --udp
+whoport --udp
 
 # Show full command lines
-portmap --cmd
+whoport --cmd
 
 # Include established connections, not just listeners
-portmap --all
+whoport --all
 ```
 
 ## Example output

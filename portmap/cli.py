@@ -59,7 +59,7 @@ def _red(s: str) -> str:
     "--cmd", is_flag=True, default=False,
     help="Show full command line for each process.",
 )
-@click.version_option(package_name="portmap")
+@click.version_option(package_name="whoport")
 def main(
     ports: tuple[int, ...],
     process: str | None,
