@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "whoport"
-version = "0.2.0"
+version = "0.2.1"
 description = "Show which processes are listening on which ports"
 readme = "README.md"
 license = "MIT"

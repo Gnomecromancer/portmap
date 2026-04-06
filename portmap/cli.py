@@ -150,7 +150,8 @@ def main(
         if cmd:
             header += "  COMMAND"
         click.echo(bold(header))
-        click.echo(dim("─" * max(len(header), 60)))
+        sep_char = "\u2500" if (sys.stdout.encoding or "").lower().startswith("utf") else "-"
+        click.echo(dim(sep_char * max(len(header), 60)))
 
         for e in entries:
             port_str = cyan(str(e.port).ljust(port_w))
